@@ -1,7 +1,6 @@
 async function fetchRecommendations() {
     const customerId = document.getElementById("customer-id").value.trim();
     const apiUrl = `https://ai-product-recommendation-system-6gde.onrender.com/recommend/${customerId}`;
-    const apiUrl = `${BASE_URL}/recommend/${customerId}`;
     const loader = document.getElementById("loader");
     const resultDiv = document.getElementById("result");
     const customerInfo = document.getElementById("customer-info");
