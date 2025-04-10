@@ -1,49 +1,86 @@
 body {
-    font-family: Arial, sans-serif;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #121212;
-    color: #fff;
+    color: #f0f0f0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
-.container {
-    background: #1e1e1e;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    min-height: 100vh;
+  }
+  
+  .container {
+    z-index: 1;
     text-align: center;
-    width: 300px;
-}
-
-input {
+    max-width: 600px;
     width: 100%;
+    padding: 20px;
+    background-color: rgba(30, 30, 30, 0.8);
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    font-size: 28px;
+  }
+  
+  .input-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  input {
     padding: 10px;
-    margin: 10px 0;
-    background: #2e2e2e;
+    border-radius: 6px;
     border: none;
-    color: #fff;
-    border-radius: 5px;
-}
-
-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #28a745;
+    width: 60%;
+    background-color: #2e2e2e;
     color: white;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #28a745;
     border: none;
-    border-radius: 5px;
+    color: white;
+    border-radius: 6px;
     cursor: pointer;
-}
-
-button:hover {
+  }
+  
+  button:hover {
     background-color: #218838;
-}
-
-/* Loader */
-.loader {
+  }
+  
+  .card {
+    background-color: #1f1f1f;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 8px;
+    text-align: left;
+  }
+  
+  .product-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .product-list li {
+    background-color: #2a2a2a;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    border-left: 4px solid #28a745;
+    transition: background 0.3s;
+  }
+  
+  .product-list li:hover {
+    background-color: #3a3a3a;
+  }
+  
+  .loader {
     border: 4px solid rgba(255, 255, 255, 0.1);
     border-top: 4px solid #fff;
     border-radius: 50%;
@@ -52,14 +89,18 @@ button:hover {
     animation: spin 1s linear infinite;
     display: none;
     margin: 10px auto;
-}
-
-@keyframes spin {
+  }
+  
+  @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
-}
-
-.background-section {
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .background-section {
     position: fixed;
     top: 0;
     left: 0;
@@ -70,14 +111,16 @@ button:hover {
     background-position: center;
     background-repeat: no-repeat;
     z-index: -1;
-}
-.blur-layer {
+  }
+  
+  .blur-layer {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    backdrop-filter: blur(8px); /* 🌫️ Adjust the blur value as needed */
-    background-color: rgba(0, 0, 0, 0.3); /* optional: darken it slightly */
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: -1;
   }
+  
